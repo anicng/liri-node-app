@@ -1,6 +1,6 @@
 # liri-node-app
 
-LIRI is a command line node app that takes in parameters and gives you back data. \
+LIRI is a command line node app that takes in parameters and gives you back data.
 
 ## It takes in the following commands: ##
 
@@ -19,8 +19,6 @@ Search results are returned from node-spotify-api
 
 ### movie-this ###
 
-Using axios, search results are returned from OMDB api
-
 Give it a song name, it will return you the following:
 
 * Movie Title
@@ -31,3 +29,7 @@ Give it a song name, it will return you the following:
 * Produced Country
 * Movie Plot
 * Actors
+
+Using axios get request, search results are returned from OMDB api then console.logged
+
+![movie-this](https://user-images.githubusercontent.com/52692899/67828452-af9c4700-fa90-11e9-8c7a-0156eb052f55.gif)
