@@ -1,6 +1,7 @@
 # liri-node-app
 
 LIRI is a command line node app that takes in parameters and gives you back data.
+It's allows you to search your favorite movie, songs and concert of an artist easier.
 
 ## It takes in the following commands: ##
 
