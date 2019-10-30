@@ -4,7 +4,7 @@ let fs = require('fs');
 //Add the code required to import the keys.js file and store it in a variable.
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
-
+var axios = require('axios');
 //access keys info
 var spotify = new Spotify(keys.spotify);
 
@@ -13,13 +13,16 @@ var value = process.argv[3];
 //Make it so liri.js can take in one of the following commands
 
 switch (action) {
-
     case "spotify-this-song":
         spotifyThisSong();
         break;
 
     case "movie-this":
         movieThis();
+        break;
+
+    case "concert-this":
+        concertThis();
         break;
 };
 
@@ -57,16 +60,15 @@ function spotifyThisSong() {
             );
 
         });
-}
+};
 
 function movieThis() {
-    var axios = require('axios');
     axios
         .get("http://www.omdbapi.com/?apikey=5c223620&tomatoes=true&t=" + value)
         .then(function (response) {
             var movieReturn = response.data
             // log JSON response when api success
-            console.log(movieReturn);
+            // console.log(movieReturn);
             console.log(
                 "+---------------RESULT-----------------------+" +
                 "\nMovie Title: " + movieReturn.Title +
@@ -95,12 +97,35 @@ function movieThis() {
         });
 };
 
-/* do-what-it-says */
-    fs.readFile('random.txt', 'utf-8', function (data, err) {
-        if (data) {
-            return console.log(data);
-        }
-        console.log(err);
-    })
+function concertThis() {
+    axios
+        .get("https://rest.bandsintown.com/artists/" + value + "/events?app_id=codingbootcamp")
+        .then(function (response) {
+            var concertReturn = response.data
 
-/* concert-this */
+            // log JSON response when api success
+            // console.log(concertReturn[0]);
+            for (var i = 0; i < concertReturn.length; i++) {
+                console.log(
+                    "Date: " + concertReturn[i].datetime +
+                    "\nVenu: " + concertReturn[i].venue.name +
+                    "\nVenu Location: " + concertReturn[i].venue.city +
+                    "\n+--------------------------------------------+"
+                );
+            }
+
+        })
+        .catch(function (error) {
+            if (error) {
+                console.log(error);
+            }
+        });
+};
+
+/* do-what-it-says */
+// fs.readFile('random.txt', 'utf-8', function (data, err) {
+//     if (data) {
+//         return console.log(data);
+//     }
+//     console.log(err);
+// })
