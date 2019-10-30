@@ -33,3 +33,17 @@ Give it a song name, it will return you the following:
 Using axios get request, search results are returned from OMDB api then console.logged
 
 ![movie-this](https://user-images.githubusercontent.com/52692899/67828452-af9c4700-fa90-11e9-8c7a-0156eb052f55.gif)
+
+### movie-this ###
+
+Give it a artist name, it will return you the following:
+
+* Name of the venue
+* Venue location
+* Date of the Event
+
+Using axios get request, search results are returned from bandsintown api then for loop each event to print out the result in console.log
+
+![concert-this](https://user-images.githubusercontent.com/52692899/67829508-b4fb9080-fa94-11e9-9f86-1b12a3b01bf9.gif)
+
+
