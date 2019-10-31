@@ -48,3 +48,8 @@ Using axios get request, search results are returned from bandsintown api then f
 ![concert-this](https://user-images.githubusercontent.com/52692899/67829508-b4fb9080-fa94-11e9-9f86-1b12a3b01bf9.gif)
 
 
+### do-what-it-says ###
+
+This function will read from random.txt file using fs.readFile and return the text in it.
+
+<img width="443" alt="Screen Shot 2019-10-30 at 5 40 42 PM" src="https://user-images.githubusercontent.com/52692899/67909429-6b668080-fb3c-11e9-956f-08a25aa1f8d7.png">
