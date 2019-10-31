@@ -33,9 +33,9 @@ Give it a song name, it will return you the following:
 
 Using axios get request, search results are returned from OMDB api then console.logged
 
-![movie-this](https://user-images.githubusercontent.com/52692899/67828452-af9c4700-fa90-11e9-8c7a-0156eb052f55.gif)
+![movie-this](https://user-images.githubusercontent.com/52692899/67909325-0ad74380-fb3c-11e9-9d86-bccb9f544156.gif)
 
-### movie-this ###
+### concert-this ###
 
 Give it a artist name, it will return you the following:
 
